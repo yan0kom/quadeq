@@ -1,0 +1,24 @@
+.roots {
+	margin: 5px;
+	border: solid 1px blue;
+	padding: 5px;
+	display: inline-block;
+	background-color: #f9e79f;
+}
+.coeffs-form {
+	margin: 5px;
+}
+.historyBlock {
+	margin-top: 10px;
+}
+.historyBlock table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 3px;
+}
+.historyBlock td:nth-child(2) {
+	text-align: right;
+}
+.historyBlock td:nth-child(3), td:nth-child(4) {
+  text-align: center;
+}

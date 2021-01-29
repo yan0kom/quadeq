@@ -16,10 +16,14 @@
 <c:if test="${quadEq.a != 0}">
 	<b><fmt:formatNumber groupingUsed="false" maxFractionDigits="10" value="${quadEq.a}"/></b>x&#178;
 	<c:if test="${quadEq.b != 0}"> 
-		+ <b><fmt:formatNumber groupingUsed="false" maxFractionDigits="10" value="${quadEq.b}"/></b>x
+		<c:out value="${quadEq.b > 0 ? ' + ' : ' - '}"/>
+		<c:set var="abs_b" value="${quadEq.b > 0 ? quadEq.b : -quadEq.b}"/>
+		<b><fmt:formatNumber groupingUsed="false" maxFractionDigits="10" value="${abs_b}"/></b>x
 	</c:if>
 	<c:if test="${quadEq.c != 0}">	
-		 + <b><fmt:formatNumber groupingUsed="false" maxFractionDigits="10" value="${quadEq.c}"/></b>
+    <c:out value="${quadEq.c > 0 ? ' + ' : ' - '}"/>
+    <c:set var="abs_c" value="${quadEq.c > 0 ? quadEq.c : -quadEq.c}"/>
+    <b><fmt:formatNumber groupingUsed="false" maxFractionDigits="10" value="${abs_c}"/></b>
 	</c:if>
 	= 0
 	<br>

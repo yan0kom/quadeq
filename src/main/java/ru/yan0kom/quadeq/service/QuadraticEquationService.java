@@ -53,10 +53,10 @@ public class QuadraticEquationService {
 			val d = Math.pow(coeffs.getB(), 2) - 4 * coeffs.getA() * coeffs.getC();
 			if (d < 0) {
 				rootCount = 0;
-			}else if (d == 0) {
+			} else if (d == 0) {
 				rootCount = 1;
 				x1 = (-coeffs.getB()) / (2 * coeffs.getA());
-			}else if (d > 0) {
+			} else if (d > 0) {
 				val dsqrt = Math.sqrt(d);
 				rootCount = 2;
 				x1 = (-coeffs.getB() + dsqrt) / (2 * coeffs.getA());
